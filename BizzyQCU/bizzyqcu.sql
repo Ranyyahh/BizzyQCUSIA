@@ -7,6 +7,9 @@
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
+-- TAKE NOTEE!!!
+-- Not syur kung ito ba yung updated na sql guys 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -325,7 +328,20 @@ CREATE TABLE `yearly_analytics` (
 );
 
 -- --------------------------------------------------------
-
+INSERT INTO users (
+    username,
+    password,
+    email,
+    role,
+    is_approved
+)
+VALUES (
+    'admin',
+    '$2y$10$REPLACE_WITH_A_REAL_PASSWORD_HASH',
+    'admin@bizzyqcu.local',
+    'admin',
+    TRUE
+);
 --
 -- Structure for view `monthly_analytics`
 --
